@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="AdventureGame">
+<head>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+   <script type="text/javascript" src="static/js/app.js"></script>
+   <script type="text/javascript" src="static/js/character_service.js"></script>
+   <script type="text/javascript" src="static/js/character_controller.js"></script>
+</head>
+<body ng-controller="CharacterController as ctrl">
+	<div class="tablecontainer">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>User name</th>
+							<th>Password</th>
+							<th>Name</th>
+							<th>Age</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="c in ctrl.characters">
+							<td><span ng-bind="c.id"></span></td>
+							<td><span ng-bind="c.username"></span></td>
+							<td><span ng-bind="c.password"></span></td>
+							<td><span ng-bind="c.name"></span></td>
+							<td><span ng-bind="c.age"></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+</body>
+</html>
